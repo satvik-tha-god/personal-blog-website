@@ -14,7 +14,9 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-
+app.get("/",function(req,res){
+  res.render(__dirname+"/views/home.ejs");
+});
 
 
 
