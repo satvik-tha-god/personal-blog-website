@@ -18,7 +18,12 @@ app.use(express.static("public"));
 app.get("/",function(req,res){
   res.render(__dirname+"/views/home.ejs", {startingContent: homeStartingContent});
 });
-
+app.get("/about",function(req,res){
+  res.render(__dirname+"/views/about.ejs", {about: aboutContent});
+});
+app.get("/contact",function(req,res){
+  res.render(__dirname+"/views/contact.ejs", {contct: contactContent});
+});
 
 
 
