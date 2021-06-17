@@ -17,8 +17,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/",function(req,res){
-  res.render(__dirname+"/views/home.ejs", {startingContent: homeStartingContent});
-  console.log(posts);
+  res.render(__dirname+"/views/home.ejs", {startingContent: homeStartingContent,
+     posts:posts,
+     title1:title,
+     body1:body});
 });
 app.get("/about",function(req,res){
   res.render(__dirname+"/views/about.ejs", {about: aboutContent});
