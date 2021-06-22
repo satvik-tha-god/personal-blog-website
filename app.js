@@ -18,9 +18,7 @@ app.use(express.static("public"));
 
 app.get("/",function(req,res){
   res.render(__dirname+"/views/home.ejs", {startingContent: homeStartingContent,
-     posts:posts,
-     title1:title,
-     body1:body});
+     posts:posts
 });
 app.get("/about",function(req,res){
   res.render(__dirname+"/views/about.ejs", {about: aboutContent});
